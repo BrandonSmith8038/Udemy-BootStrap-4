@@ -82,28 +82,28 @@
     <!--########################START HERE#########################-->
 
     <!-- TOOLTIPS -->
-    <button>Tooltip On Top</button>
-    <button>Tooltip On Right</button>
-    <button>Tooltip On Bottom</button>
-    <button>Tooltip On Left</button>
+    <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tool Tip On Top">Tooltip On Top</button>
+    <button class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tool Tip On Right">Tooltip On Right</button>
+    <button class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Tool Tip On Bottom">Tooltip On Bottom</button>
+    <button class="btn btn-info" data-toggle="tooltip" data-placement="left" title="Tool Tip On Left">Tooltip On Left</button>
 
     <br><br>
 
     <!-- TOOLTIPS WITH HTML -->
-    <button>Tooltip On With HTML</button>
+    <button class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Tool Tip On Top">Tooltip On With HTML</button>
 
     <hr>
 
     <!-- TRIGGER WITH JS -->
-    <button>
+    <button class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Tool Tip On Top">
       Show Tooltip
     </button>
 
-    <button>
+    <button class="btn btn-dark" data-toggle="tooltip" data-placement="top" title="Tool Tip On Top">
       Hide Tooltip
     </button>
 
-    <button>
+    <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Tool Tip On Top">
       Toggle Tooltip
     </button>
 
@@ -115,7 +115,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <script>
+    //Init tooltips
     
+    $('[data-toggle="tootip"]').tooltip();
   </script>
 </body>
 </html>
