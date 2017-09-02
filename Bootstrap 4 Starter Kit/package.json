@@ -4,7 +4,7 @@
   "description": "Bootsrap 4 workflow",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "author": "Brandon Smith",
   "license": "MIT",
