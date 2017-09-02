@@ -82,35 +82,67 @@
     <!--########################START HERE#########################-->
 
     <!-- POPOVER -->
-    <button>
+    <button
+     class="btn btn-danger"
+     data-toggle="popover"
+     data-placement="top"
+     title="Popover Title"
+     data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+     >
       Toggle popover
     </button>
 
-    <button>
+    <button
+     class="btn btn-success"
+     data-toggle="popover"
+     data-placement="right"
+     title="Popover Title"
+     data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+     >
       Toggle popover
     </button>
 
-    <button>
+    <button
+     class="btn btn-primary"
+     data-toggle="popover"
+     data-placement="left"
+     title="Popover Title"
+     data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+     >
       Toggle popover
     </button>
 
-    <button>
+    <button
+     class="btn btn-info"
+     data-toggle="popover"
+     data-placement="bottom"
+     title="Popover Title"
+     data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+     >
       Toggle popover
     </button>
 
     <br><br>
 
     <!-- DISMISSIBLE POPOVER -->
-    <button>
-      Toggle popover
+    <button
+     class="btn btn-info"
+     id="myPopOver"
+     data-toggle="popover"
+     data-placement="bottom"
+     title="Dissmable Popover Title"
+     data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+     data-trigger="focus"
+     >
+      Dissmable Popover Title
     </button>
 
     <hr>
 
     <!-- CONTROL WITH JS -->
-    <button>Show Popover</button>
-    <button>Hide Popover</button>
-    <button>Toggle Popover</button>
+    <button class="btn btn-secondary" onclick="showPopover()">Show Popover</button>
+    <button class="btn btn-secondary" onclick="hidePopover()">Hide Popover</button>
+    <button class="btn btn-secondary" onclick="togglePopover()">Toggle Popover</button>
   </div>
 
   <div style="margin-top:500px;"></div>
@@ -119,7 +151,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <script>
+    $('[data-toggle="popover"]').popover();
     
+    function showPopover(){
+      $('#myPopOver').popover('show');
+    }
+    
+     function hidePopover(){
+      $('#myPopOver').popover('hide');
+    }
+    
+     function togglePopover(){
+      $('#myPopOver').popover('toggle');
+    }
   </script>
 </body>
 </html>
