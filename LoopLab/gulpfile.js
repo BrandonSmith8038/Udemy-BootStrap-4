@@ -31,9 +31,9 @@ gulp.task('fa',function(){
 		.pipe(gulp.dest('src/css'))
 });
 
-gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'],['sass'])
+gulp.watch(['src/scss/*.scss','node_modules/bootstrap/scss/bootstrap.scss',],['sass'])
 
-gulp.task('default',['js','fa','fonts']);
+gulp.task('default',['sass','js','fa','fonts']);
 
 
 
