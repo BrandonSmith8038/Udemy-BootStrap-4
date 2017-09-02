@@ -3,7 +3,7 @@ const sass = require('gulp-sass');
 
 //Complie Sass & inject Into Browser
 gulp.task('sass',function(){
-	return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'])
+	return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/style.scss'])
 		.pipe(sass())
 		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(gulp.dest('src/css'))
@@ -31,7 +31,7 @@ gulp.task('fa',function(){
 		.pipe(gulp.dest('src/css'))
 });
 
-gulp.watch(['src/scss/*.scss','node_modules/bootstrap/scss/bootstrap.scss',],['sass'])
+gulp.watch(['src/scss/style.scss','node_modules/bootstrap/scss/bootstrap.scss',],['sass'])
 
 gulp.task('default',['sass','js','fa','fonts']);
 
