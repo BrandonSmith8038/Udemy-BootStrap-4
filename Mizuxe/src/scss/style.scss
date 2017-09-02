@@ -1,5 +1,16 @@
-$bg-color: blue;
+$primary: #3292a6;
 
-body{
-	background: $bg-color;
+body {
+	margin-top: 105px;
+}
+
+.navbar {
+	box-shadow: 2px 2px 5px $primary;
+	opacity: 0.9;
+	background: white;
+	
+	.nav-item {
+		font-size: 1.4rem;
+		padding-right: 20px;
+	}
 }
