@@ -33,7 +33,7 @@ gulp.task('fa',function(){
 
 gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'],['sass'])
 
-gulp.task('default',['js','fa','fonts']);
+gulp.task('default',['sass','js','fa','fonts']);
 
 
 
