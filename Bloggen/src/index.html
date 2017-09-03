@@ -35,7 +35,7 @@
 						<a href="users.html" class="nav-link">Users</a>
 					</li>
 				</ul>
-				
+
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item dropdown mr-3">
 						<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">
@@ -59,9 +59,9 @@
 			</div>
 		</div>
 	</nav>
-	
+
 	<header id="main-header" class="py-2 bg-primary text-white">
-	
+
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
@@ -69,12 +69,148 @@
 				</div>
 			</div>
 		</div>
-	
+
 	</header>
+
+	<!-- 	ACTIONS -->
+
+	<section id="actions" class="py-4 mb-4 bg-light">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addPostModal">
+						<i class="fa fa-plus"></i> Add Post
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#addCategoryModal">
+						<i class="fa fa-plus"></i> Add Category
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#addUserModal">
+						<i class="fa fa-plus"></i> Add User
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+
+	<!-- 	POST MODAL -->
+
+	<div class="modal fade" id="addPostModal">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header bg-primary text-white">
+					<h5 class="modal-title">Add Post</h5>
+					<button class="close" data-dismiss="modal"><span>&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="tile">Title</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="category">Category</label>
+							<select type="text" class="form-control">
+								<option value=" ">Web Development</option>
+								<option value=" ">Tech Gadgets</option>
+								<option value=" ">Bussiness</option>
+								<option value=" ">Health and Wellness</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="file">Image Upload</label>
+							<input type="file" class="form-control-file">
+							<small class="form-text text-muted">Max Size 3mb</small>
+						</div>
+						<div class="form-group">
+							<label for="body">Body</label>
+							<textarea name="editor1" type="text" class="form-control"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button class="btn btn-primary" data-dismiss="modal">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 	CATEGORY MODAL -->
+
+	<div class="modal fade" id="addCategoryModal">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header bg-success text-white">
+					<h5 class="modal-title">Add Category</h5>
+					<button class="close" data-dismiss="modal"><span>&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="tile">Title</label>
+							<input type="text" class="form-control">
+						</div>
+					</form>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button class="btn btn-success" data-dismiss="modal">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 	USER MODAL -->
+
+	<div class="modal fade" id="addUserModal">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header bg-warning text-white">
+					<h5 class="modal-title">Add User</h5>
+					<button class="close" data-dismiss="modal"><span>&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="name">Name</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="name">Email</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="name">Password</label>
+							<input type="password" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="name">Confirm Password</label>
+							<input type="password" class="form-control">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button class="btn btn-warning" data-dismiss="modal">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="https://cdn.ckeditor.com/4.7.2/standard/ckeditor.js"></script>
+	<script>
+		CKEDITOR.replace('editor1');
+	</script>
 </body>
 
 </html>
