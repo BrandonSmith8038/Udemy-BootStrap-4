@@ -1,13 +1,12 @@
 const gulp = require('gulp');
-const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 
 //Complie Sass & inject Into Browser
 gulp.task('sass',function(){
 	return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'])
 		.pipe(sass())
+		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(gulp.dest('src/css'))
-		.pipe(browserSync.stream());
 });
 
 //Move js files to src/js
@@ -15,19 +14,8 @@ gulp.task('sass',function(){
 gulp.task('js', function(){
 	return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js','node_modules/jquery/dist/jquery.min.js','node_modules/popper.js/dist/umd/popper.min.js'])
 		.pipe(gulp.dest('src/js'))
-		.pipe(browserSync.stream());
 });
 
-//Watch Sass & serve
-
-gulp.task('serve',['sass'],function(){
-	browserSync.init({
-		server: "./src"
-	});
-	
-	gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'],['sass'])
-	gulp.watch('src/*.html').on('change', browserSync.reload);
-});
 
 //Move fonts to src
 
@@ -43,8 +31,9 @@ gulp.task('fa',function(){
 		.pipe(gulp.dest('src/css'))
 });
 
+gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'],['sass'])
 
-gulp.task('default',['js','serve','fa','fonts']);
+gulp.task('default',['sass','js','fa','fonts']);
 
 
 
