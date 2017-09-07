@@ -72,3 +72,12 @@ footer#main-footer {
 
 #about img {
   margin-top: -50px; }
+
+#faq .card {
+  border: #444; }
+  #faq .card a {
+    color: #fff;
+    text-decoration: none; }
+
+#faq .card-body, #faq .card-header {
+  background: #333; }
